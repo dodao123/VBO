@@ -18,7 +18,7 @@ const Banner = () => {
       {/* Banner cho mobile */}
       <div className="block md:hidden">
         <Image
-          src="/assetLandingPage/mobileBanner.png"
+          src="/assetLandingPage/mobileBanner.jpg"
           alt="Banner Mobile"
           fill
           className="object-cover"
