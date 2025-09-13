@@ -68,7 +68,7 @@ const TestimonialsSection = () => {
 
   return (
     <section className="w-full py-20 px-4 md:-mt-24">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* Title */}
         <h2 className={`${greatVibes.className} text-center text-green-600 text-5xl md:text-6xl mb-4`}>
           Những lời cảm nhận

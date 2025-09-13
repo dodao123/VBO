@@ -29,7 +29,7 @@ const Footer = () => {
       </div>
       
      <footer id="contact" className="w-full bg-cyan-700 bg-opacity-0.2 text-white relative overflow-hidden -mt-1">
-    <div className="max-w-6xl mx-auto px-4 py-8 md:py-12">
+    <div className="max-w-7xl mx-auto px-4 py-8 md:py-12">
           
           {/* Main Content - Responsive Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">

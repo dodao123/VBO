@@ -47,10 +47,8 @@ const IntroductionSection = () => {
             {/* Description */}
             <p data-aos="fade-up" data-aos-delay="250" className={`${lora.className} text-base md:text-lg text-gray-600 leading-relaxed`}>
   Ngày 22-06-2020 <br />
-  <strong>VƯỜN BIẾT ƠN</strong> ra đời, với <br />
-  - Hành động lan tỏa văn hóa đọc chạm đến trái tim mọi người <br />
-  - Kiến tạo những trái tim biết ơn <br />
-  - Hướng đến ba giá trị cốt lõi: <br />
+  <strong>VƯỜN BIẾT ƠN</strong> Câu Lạc Bộ Đọc Sách Hướng Dương Được thành lập và hoạt động với những thiện pháp lan tỏa lòng biết ơn và văn hóa đọc chạm đến trái tim mọi người.Hướng đến ba giá trị cốt lõi:  <br />
+ 
   + Tu tâm bồi trí tuệ <br />
   + Rèn luyện nghị lực <br />
   + Cho đi để hạnh phúc <br /> <br />

@@ -118,7 +118,7 @@ const GallerySection = () => {
             }`}
           >
             {imageSets.map((imageSet, setIndex) => (
-              <div key={setIndex} className="grid grid-cols-1 grid-rows-2 md:grid-cols-3 md:grid-rows-2 gap-6 md:gap-8 w-full max-w-6xl flex-shrink-0 px-4">
+              <div key={setIndex} className="grid grid-cols-1 grid-rows-2 md:grid-cols-3 md:grid-rows-2 gap-6 md:gap-8 w-full max-w-7xl flex-shrink-0 px-4">
                 {/* Mobile: 2 rows x 1 column, Desktop: 2 rows x 3 columns */}
                 <div className={`relative h-48 md:h-64 ${frameStyles[0]} hover:scale-110 transition-all duration-500`}>
                   <div className="relative w-full h-full overflow-hidden rounded-2xl">

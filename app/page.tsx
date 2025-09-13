@@ -26,7 +26,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="w-full bg-[url('/assetLandingPage/bg.png')] bg-cover bg-center bg-fixed">
+    <main className="w-full max-w-[100vw] overflow-x-hidden bg-[url('/assetLandingPage/bg.png')] bg-cover bg-center bg-fixed">
       <Navbar />
       <HeroSection />
       <Wave />
