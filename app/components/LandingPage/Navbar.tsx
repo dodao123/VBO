@@ -54,7 +54,7 @@ const Navbar = () => {
 }`}>
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 ">
-        <div className="flex justify-between items-center h-24 ">
+        <div className="flex items-center justify-between h-24">
           
           {/* Toggle Button for Mobile */}
           <div className="md:hidden flex items-center">
@@ -70,27 +70,24 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* Logo */}
-          <div className="flex items-center space-x-2 flex-shrink-0 ">
+          {/* Logo - Center on mobile, left on desktop */}
+          <div className="flex-1 flex justify-end md:flex-none md:justify-center">
             <Image
               src="/assetLandingPage/logo.png"
               alt="Logo"
               width={128}
               height={32}
-              className="w-20 h-auto md:w-32" // w-8 = 32px, md:w-32 = 128px
+              className="w-20 h-auto md:w-32 md:ml-155"
             />
           </div>
 
-          
-
-
           {/* Desktop Menu - Center */}
-          <div className={`hidden md:flex items-center space-x-1 ${montserrat.className}`}>
+          <div className={`hidden md:flex items-center space-x-1 absolute left-1/2 transform -translate-x-1/2 ${montserrat.className}`}>
             {menuItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="relative px-4 py-2 text-black font-Montserrat Medium group"
+                className="relative px-16 py-2 text-black font-Montserrat Medium group"
               >
                 <span className="relative z-10 ">{item.name}</span>
                 <div className="absolute bottom-1 left-1/2 w-0 h-0.5 bg-gradient-to-r from-teal-400 to-blue-400 rounded-full transition-all duration-500 group-hover:w-full group-hover:left-0 transform origin-center"></div>
@@ -99,7 +96,8 @@ const Navbar = () => {
             ))}
           </div>
 
-          
+          {/* Spacer for desktop to balance layout */}
+          <div className="hidden md:block w-32"></div>
         </div>
       </div>
 
@@ -125,7 +123,7 @@ const Navbar = () => {
     isMenuOpen ? "translate-x-0" : "-translate-x-full"
   }`}
   role="dialog"
-  aria-modal={isMenuOpen ? 'true' : 'false'}
+  aria-modal={isMenuOpen}
 >
   <div className="px-4 py-6 space-y-4 relative h-full">
     {/* Nút đóng */}
