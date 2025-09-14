@@ -38,13 +38,12 @@ const AuthorSection = () => {
 
             {/* Main Heading */}
             <h2 data-aos="fade-left" data-aos-delay="200" className={`${lora.className} text-2xl md:text-3xl font-semibold text-gray-800 leading-relaxed`}>
-              SC Diệu Thiện - Trái Tim Biết Ơn
+              Sách Trái Tim Biết Ơn
             </h2>
             
             {/* Description */}
             <div data-aos="fade-up" data-aos-delay="250" className={`${lora.className} text-base md:text-lg text-gray-600 leading-relaxed`}>
-              <p className="font-semibold">Tác giả</p>
-              <p className="mt-2">Sách Trái Tim Biết Ơn</p>
+
               <p className="mt-2">SC Diệu Thiện</p>
               <p className="mt-2">Xuất gia hiện ở Hà Nội</p>
               <p className="mt-2">Thế danh: Đào Thị Hồng Hoa</p>
