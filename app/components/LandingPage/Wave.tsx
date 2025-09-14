@@ -92,20 +92,17 @@ const MobileWave = () => {
             <div className="grid grid-cols-1 gap-6 text-center text-white">
               {/* Stat 1 */}
               <div className="space-y-0">
-                <div className="text-3xl font-bold text-lime-700">300+</div>
-                <div className="text-base">Trẻ từ 12 tháng - 5 tuổi</div>
+                <div className="text-3xl font-bold text-lime-700">Trí Tuệ</div>
               </div>
               
               {/* Stat 2 */}
               <div className="space-y-1">
-                <div className="text-3xl font-bold text-lime-700">1,000+</div>
-                <div className="text-base">Số Lượng Thành Viên</div>
+                <div className="text-3xl font-bold text-lime-700">Từ Bi</div>
               </div>
               
               {/* Stat 3 */}
               <div className="space-y-1">
-                <div className="text-3xl font-bold text-lime-700">40+</div>
-                <div className="text-base">Giáo Viên</div>
+                <div className="text-3xl font-bold text-lime-700">Nghị lực</div>
               </div>
             </div>
           </div>
