@@ -21,7 +21,7 @@ const Banner = () => {
           src="/assetLandingPage/mobileBanner.jpg"
           alt="Banner Mobile"
           fill
-          className="object-cover"
+          className=""
           priority
         />
       </div>
