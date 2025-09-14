@@ -64,11 +64,11 @@ const GallerySection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const imagesPerView = 6; // Number of images to show at once
 
-  // Auto-advance every 4 seconds
+  // Auto-advance every 2 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % galleryImages.length);
-    }, 4000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
@@ -134,8 +134,8 @@ const GallerySection = () => {
           <div className="absolute bottom-1/4 -left-4 w-14 h-14 bg-gradient-to-br from-purple-300 to-purple-400 rounded-full opacity-20 animate-pulse delay-3000 shadow-xl"></div>
         </div>
 
-        {/* Progress Indicator */}
-        <div className="flex justify-center mt-12 space-x-2">
+        {/* Progress Indicator - Hidden on mobile */}
+        <div className="hidden md:flex justify-center mt-12 space-x-2">
           {galleryImages.map((_, index) => (
             <button
               key={index}
