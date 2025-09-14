@@ -33,7 +33,7 @@ const AuthorSection = () => {
             <h1 data-aos="fade-left" data-aos-delay="150"
               className={`${greatVibes.className} text-green-600 text-5xl md:text-7xl mb-8`}
             >
-              Tác Giả Sách Trái Tim Biết Ơn
+              Tác Giả 
             </h1>
 
             {/* Main Heading */}
