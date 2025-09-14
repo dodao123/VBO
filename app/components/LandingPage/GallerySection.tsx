@@ -52,42 +52,42 @@ const galleryImages = [
 
 // Creative frame styles for each image
 const frameStyles = [
-  'rounded-2xl shadow-2xl border-8 border-white bg-white p-3 transform rotate-1 hover:rotate-0',
-  'rounded-full shadow-2xl border-8 border-gradient-to-r from-green-200 to-green-300 bg-gradient-to-br from-green-100 to-green-50 p-4 transform -rotate-2 hover:rotate-0',
-  'rounded-3xl shadow-2xl border-8 border-gradient-to-r from-blue-200 to-blue-300 bg-gradient-to-br from-blue-100 to-blue-50 p-3 transform rotate-3 hover:rotate-1',
-  'rounded-2xl shadow-2xl border-8 border-gradient-to-r from-pink-200 to-pink-300 bg-gradient-to-br from-pink-100 to-pink-50 p-3 transform -rotate-1 hover:rotate-0',
-  'rounded-3xl shadow-2xl border-8 border-gradient-to-r from-yellow-200 to-yellow-300 bg-gradient-to-br from-yellow-100 to-yellow-50 p-4 transform rotate-2 hover:rotate-0',
-  'rounded-2xl shadow-2xl border-8 border-gradient-to-r from-purple-200 to-purple-300 bg-gradient-to-br from-purple-100 to-purple-50 p-3 transform -rotate-3 hover:rotate-1'
+  'rounded-2xl shadow-2xl border-4 border-white bg-white p-2 transform rotate-1 hover:rotate-0',
+  'rounded-full shadow-2xl border-4 border-green-200 bg-green-50 p-3 transform -rotate-2 hover:rotate-0',
+  'rounded-3xl shadow-2xl border-4 border-blue-200 bg-blue-50 p-2 transform rotate-3 hover:rotate-1',
+  'rounded-2xl shadow-2xl border-4 border-pink-200 bg-pink-50 p-2 transform -rotate-1 hover:rotate-0',
+  'rounded-3xl shadow-2xl border-4 border-yellow-200 bg-yellow-50 p-3 transform rotate-2 hover:rotate-0',
+  'rounded-2xl shadow-2xl border-4 border-purple-200 bg-purple-50 p-2 transform -rotate-3 hover:rotate-1'
 ];
 
 const GallerySection = () => {
-  const [currentStartIndex, setCurrentStartIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const imagesPerView = 6; // Number of images to show at once
 
-  // Auto-advance every 3 seconds
+  // Auto-advance every 4 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentStartIndex((prev) => (prev + 3) % galleryImages.length);
-    }, 3000);
+      setCurrentIndex((prev) => (prev + 1) % galleryImages.length);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, []);
 
-  // Get multiple sets of images for smooth sliding
-  const getImageSets = () => {
-    const sets = [];
-    for (let setIndex = 0; setIndex < 6; setIndex++) { // 6 sets for smooth infinite scroll
-      const images = [];
-      for (let i = 0; i < 6; i++) {
-        const index = ((setIndex * 3) + i) % galleryImages.length;
-        images.push(galleryImages[index]);
-      }
-      sets.push(images);
+  // Get current batch of images to display
+  const getCurrentImages = () => {
+    const images = [];
+    for (let i = 0; i < imagesPerView; i++) {
+      const index = (currentIndex + i) % galleryImages.length;
+      images.push({
+        src: galleryImages[index],
+        index: index,
+        frameStyle: frameStyles[i % frameStyles.length]
+      });
     }
-    return sets;
+    return images;
   };
 
-  const imageSets = getImageSets();
-  const currentSetIndex = Math.floor(currentStartIndex / 3) % imageSets.length;
+  const currentImages = getCurrentImages();
 
   return (
     <section id="gallery" className="w-full py-20">
@@ -106,119 +106,59 @@ const GallerySection = () => {
         </div>
 
         {/* Gallery Grid */}
-        <div className="relative h-[400px] md:h-[600px] flex justify-center items-center overflow-hidden">
-          <div 
-            className={`flex transition-transform duration-1000 ease-in-out w-full ${
-              currentSetIndex === 1 ? '-translate-x-full' :
-              currentSetIndex === 2 ? '-translate-x-[200%]' :
-              currentSetIndex === 3 ? '-translate-x-[300%]' :
-              currentSetIndex === 4 ? '-translate-x-[400%]' :
-              currentSetIndex === 5 ? '-translate-x-[500%]' :
-              'translate-x-0'
-            }`}
-          >
-            {imageSets.map((imageSet, setIndex) => (
-              <div key={setIndex} className="grid grid-cols-1 grid-rows-2 md:grid-cols-3 md:grid-rows-2 gap-6 md:gap-8 w-full max-w-7xl flex-shrink-0 px-4">
-                {/* Mobile: 2 rows x 1 column, Desktop: 2 rows x 3 columns */}
-                <div className={`relative h-48 md:h-64 ${frameStyles[0]} hover:scale-110 transition-all duration-500`}>
-                  <div className="relative w-full h-full overflow-hidden rounded-2xl">
-                    <Image
-                      src={`/assetLandingPage/Galary/${imageSet[0]}`}
-                      alt="Khách hàng với cuốn sách Trái Tim Biết Ơn"
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 90vw, 30vw"
-                    />
-                  </div>
-                </div>
-                
-                <div className={`relative h-48 md:h-64 ${frameStyles[1]} hover:scale-110 transition-all duration-500`}>
-                  <div className="relative w-full h-full overflow-hidden rounded-full">
-                    <Image
-                      src={`/assetLandingPage/Galary/${imageSet[1]}`}
-                      alt="Khách hàng với cuốn sách Trái Tim Biết Ơn"
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 90vw, 30vw"
-                    />
-                  </div>
-                </div>
-                
-                <div className={`relative h-48 md:h-64 ${frameStyles[2]} hover:scale-110 transition-all duration-500 hidden md:block`}>
-                  <div className="relative w-full h-full overflow-hidden rounded-3xl">
-                    <Image
-                      src={`/assetLandingPage/Galary/${imageSet[2]}`}
-                      alt="Khách hàng với cuốn sách Trái Tim Biết Ơn"
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 90vw, 30vw"
-                    />
-                  </div>
-                </div>
-
-                <div className={`relative h-48 md:h-64 ${frameStyles[3]} hover:scale-110 transition-all duration-500 hidden md:block`}>
-                  <div className="relative w-full h-full overflow-hidden rounded-2xl">
-                    <Image
-                      src={`/assetLandingPage/Galary/${imageSet[3]}`}
-                      alt="Khách hàng với cuốn sách Trái Tim Biết Ơn"
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 90vw, 30vw"
-                    />
-                  </div>
-                </div>
-                
-                <div className={`relative h-48 md:h-64 ${frameStyles[4]} hover:scale-110 transition-all duration-500 hidden md:block`}>
-                  <div className="relative w-full h-full overflow-hidden rounded-3xl">
-                    <Image
-                      src={`/assetLandingPage/Galary/${imageSet[4]}`}
-                      alt="Khách hàng với cuốn sách Trái Tim Biết Ơn"
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 90vw, 30vw"
-                    />
-                  </div>
-                </div>
-                
-                <div className={`relative h-48 md:h-64 ${frameStyles[5]} hover:scale-110 transition-all duration-500 hidden md:block`}>
-                  <div className="relative w-full h-full overflow-hidden rounded-2xl">
-                    <Image
-                      src={`/assetLandingPage/Galary/${imageSet[5]}`}
-                      alt="Khách hàng với cuốn sách Trái Tim Biết Ơn"
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 90vw, 30vw"
-                    />
-                  </div>
+        <div className="relative">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+            {currentImages.map((image, index) => (
+              <div 
+                key={`${image.index}-${currentIndex}`}
+                className={`relative h-48 md:h-64 lg:h-72 ${image.frameStyle} hover:scale-105 transition-all duration-500`}
+              >
+                <div className="relative w-full h-full overflow-hidden rounded-2xl">
+                  <Image
+                    src={`/assetLandingPage/Galary/${image.src}`}
+                    alt={`Khách hàng với cuốn sách Trái Tim Biết Ơn - Ảnh ${image.index + 1}`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  />
                 </div>
               </div>
             ))}
           </div>
 
           {/* Decorative Elements */}
-          <div className="absolute top-10 left-10 w-24 h-24 bg-gradient-to-br from-green-300 to-green-400 rounded-full opacity-20 animate-pulse shadow-xl"></div>
-          <div className="absolute bottom-20 right-10 w-20 h-20 bg-gradient-to-br from-blue-300 to-blue-400 rounded-full opacity-20 animate-pulse delay-1000 shadow-xl"></div>
-          <div className="absolute top-1/2 left-5 w-16 h-16 bg-gradient-to-br from-pink-300 to-pink-400 rounded-full opacity-20 animate-pulse delay-2000 shadow-xl"></div>
-          <div className="absolute top-20 right-20 w-12 h-12 bg-gradient-to-br from-yellow-300 to-yellow-400 rounded-full opacity-25 animate-bounce shadow-lg"></div>
-          <div className="absolute bottom-40 left-20 w-14 h-14 bg-gradient-to-br from-purple-300 to-purple-400 rounded-full opacity-20 animate-pulse delay-3000 shadow-xl"></div>
+          <div className="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-br from-green-300 to-green-400 rounded-full opacity-20 animate-pulse shadow-xl"></div>
+          <div className="absolute -bottom-8 -right-4 w-20 h-20 bg-gradient-to-br from-blue-300 to-blue-400 rounded-full opacity-20 animate-pulse delay-1000 shadow-xl"></div>
+          <div className="absolute top-1/2 -left-6 w-16 h-16 bg-gradient-to-br from-pink-300 to-pink-400 rounded-full opacity-20 animate-pulse delay-2000 shadow-xl"></div>
+          <div className="absolute -top-6 -right-8 w-12 h-12 bg-gradient-to-br from-yellow-300 to-yellow-400 rounded-full opacity-25 animate-bounce shadow-lg"></div>
+          <div className="absolute bottom-1/4 -left-4 w-14 h-14 bg-gradient-to-br from-purple-300 to-purple-400 rounded-full opacity-20 animate-pulse delay-3000 shadow-xl"></div>
         </div>
 
         {/* Progress Indicator */}
         <div className="flex justify-center mt-12 space-x-2">
-          {Array.from({ length: Math.min(12, galleryImages.length) }).map((_, index) => (
-            <div
+          {galleryImages.map((_, index) => (
+            <button
               key={index}
+              onClick={() => setCurrentIndex(index)}
               className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index === currentStartIndex % 12
+                index === currentIndex
                   ? 'bg-green-600 scale-125'
-                  : 'bg-green-200'
+                  : 'bg-green-200 hover:bg-green-300'
               }`}
+              aria-label={`Xem ảnh ${index + 1}`}
             />
           ))}
         </div>
 
+        {/* Image Counter */}
+        {/* <div className="text-center mt-6">
+          <p className={`${lora.className} text-green-600 text-sm`}>
+            Hiển thị ảnh {currentIndex + 1} - {Math.min(currentIndex + imagesPerView, galleryImages.length)} / {galleryImages.length}
+          </p>
+        </div> */}
+
         {/* Footer Text */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-8">
           <p className={`${lora.className} text-gray-500 text-sm italic`}>
             Mỗi nụ cười là một câu chuyện, mỗi cuốn sách là một hành trình...
           </p>
