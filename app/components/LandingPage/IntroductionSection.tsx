@@ -55,7 +55,7 @@ const IntroductionSection = () => {
 
   <strong>Slogan: </strong>
   Lan tỏa yêu thương - Hướng điều tích cực <br />
-  <strong>Vườn biết ơn:</strong> Nơi đồng hành của những trái tim yêu thương
+  <strong>Ý nghĩa logo vươn biết ơn mang thông điệp</strong>
   
   {isExpanded && (
     <>
