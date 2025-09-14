@@ -144,11 +144,11 @@ const TestimonialsSection = () => {
               {/* Content Section */}
               <div className="lg:col-span-2 p-4 md:p-6 lg:p-8 xl:p-12">
                 {/* Quote Icon */}
-                <div className="flex justify-start mb-4 md:mb-6">
+                {/* <div className="flex justify-start mb-4 md:mb-6">
                   <div className="bg-green-100 rounded-full p-2 md:p-3">
                     <Quote className="w-6 h-6 md:w-8 md:h-8 text-green-600" />
                   </div>
-                </div>
+                </div> */}
 
                 {/* Title */}
                 <h3 className={`${dancingScript.className} text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-green-700 mb-4 md:mb-6 font-medium leading-tight`}>

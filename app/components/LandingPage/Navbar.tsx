@@ -1,5 +1,4 @@
-// components/LandingPage/Navbar.tsx
-"use client";
+
 
 import { useState, useEffect } from 'react';
 import { Menu, X, User, Phone } from 'lucide-react';
@@ -29,7 +28,7 @@ const Navbar = () => {
     { name: 'Home', href: '#' },
     { name: 'About', href: '#about' },
     { name: 'Teachers', href: '#teachers' },
-    { name: 'Book', href: '#book' },
+    { name: 'Download Book', href: '/docs/Gratefulheart.docx', download: true },
   ];
 
     // Khóa scroll khi mở menu
@@ -87,7 +86,8 @@ const Navbar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="relative px-4 py-2 text-black font-medium group"
+                download={item.download || false}
+                className="relative px-4 py-2 text-black font-medium group whitespace-nowrap"
               >
                 <span className="relative z-10">{item.name}</span>
                 <div className="absolute bottom-1 left-1/2 w-0 h-0.5 bg-gradient-to-r from-teal-400 to-blue-400 rounded-full transition-all duration-500 group-hover:w-full group-hover:left-0 transform origin-center"></div>
@@ -142,6 +142,7 @@ const Navbar = () => {
         <a
           key={item.name}
           href={item.href}
+          download={item.download || false}
           className="block px-4 py-3 text-gray-800 hover:bg-yellow-400 hover:text-black rounded transition font-medium"
           onClick={() => setIsMenuOpen(false)}
         >
