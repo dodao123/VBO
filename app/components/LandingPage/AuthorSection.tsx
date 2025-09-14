@@ -33,35 +33,55 @@ const AuthorSection = () => {
             <h1 data-aos="fade-left" data-aos-delay="150"
               className={`${greatVibes.className} text-green-600 text-5xl md:text-7xl mb-8`}
             >
-              Tác giả
+              Tác Giả Sách Trái Tim Biết Ơn
             </h1>
 
             {/* Main Heading */}
             <h2 data-aos="fade-left" data-aos-delay="200" className={`${lora.className} text-2xl md:text-3xl font-semibold text-gray-800 leading-relaxed`}>
-              Diệu Thiện - Trái Tim Biết Ơn
+              SC Diệu Thiện - Trái Tim Biết Ơn
             </h2>
             
             {/* Description */}
-            <p data-aos="fade-up" data-aos-delay="250" className={`${lora.className} text-base md:text-lg text-gray-600 leading-relaxed`}>
-              <strong>Tác giả</strong> với tâm huyết và tình yêu dành cho trẻ em <br />
-              - Người đặt nền móng cho triết lý giáo dục biết ơn <br />
-              - Kiến tạo những giá trị nhân văn qua từng trang sách <br />
-              - Truyền cảm hứng yêu thương đến mọi trái tim <br />
-              - Góp phần xây dựng thế hệ trẻ biết ơn và nhân ái <br /> <br />
+            <div data-aos="fade-up" data-aos-delay="250" className={`${lora.className} text-base md:text-lg text-gray-600 leading-relaxed`}>
+              <p className="font-semibold">Tác giả</p>
+              <p className="mt-2">Sách Trái Tim Biết Ơn</p>
+              <p className="mt-2">SC Diệu Thiện</p>
+              <p className="mt-2">Xuất gia hiện ở Hà Nội</p>
+              <p className="mt-2">Thế danh: Đào Thị Hồng Hoa</p>
+              <p className="mt-2">Sinh ngày 15/8/1991</p>
+              <p className="mt-3">Xuất thân trong một gia đình có truyền thống giáo dục.</p>
 
-              <strong>Tầm nhìn:</strong>
-              Mỗi đứa trẻ đều có thể trở thành những trái tim biết ơn <br />
-              <strong>Sứ mệnh:</strong> Lan tỏa tình yêu thương qua giáo dục
-              
+              {/* Short timeline / highlights visible by default */}
+              <div className="mt-3 space-y-1">
+                <p>Năm 2015: Tốt nghiệp Cử Nhân Đại Học Y Hà Nội</p>
+                <p>Năm 2017: Can thiệp hỗ trợ giáo dục đặc biệt cho trẻ</p>
+                <p>Năm 2020: Sáng lập Vườn Biết Ơn - Câu Lạc Bộ Đọc Sách Hướng Dương.</p>
+                <p>Được bạn nhỏ gọi trìu mến là cô giáo Hướng Dương trong những giờ đọc biết ơn.</p>
+              </div>
+
+              {/* Expanded content */}
               {isExpanded && (
-                <>
-                  <br /> <br />
-                  "Giáo dục không chỉ là truyền đạt kiến thức mà còn là nuôi dưỡng tâm hồn, 
-                  giúp trẻ em hiểu được giá trị của lòng biết ơn, từ đó sống một cuộc đời 
-                  ý nghĩa và hạnh phúc hơn."
-                </>
+                <div className="mt-4 space-y-3">
+                  <p><strong>Hạnh nguyện:</strong></p>
+                  <p>Sống đời phạm hạnh, thiểu dục tri túc và làm những thiện pháp.</p>
+
+                  <p><strong>Nguyện mong:</strong></p>
+                  <p>
+                    Từ năm 2026 đến năm 2035 — Đủ nhân duyên thiện lành, được Phật Tử tin tưởng yêu mến
+                    phát tâm chung tay xây dựng một tịnh xá có thư viện và khu vườn biết ơn đủ rộng để mở
+                    các khóa thiền cho trẻ em, hướng dẫn các em đọc sách và thực tập lòng biết ơn.
+                  </p>
+
+                  <p><strong>SC Diệu Thiện chia sẻ rằng:</strong></p>
+                  <blockquote className="pl-4 border-l-4 border-green-200 italic">
+                    "Con tin sâu sắc vào luật nhân quả, con luôn tâm niệm rằng người có lòng biết ơn
+                    và hành thiện sẽ mang hạnh phúc cho mình cho người. Con xin tri ân đến tất cả những
+                    mối nhân duyên và những điều xảy đến trong cuộc đời mình. Con xin nguyện sống bằng
+                    trái tim biết ơn.”
+                  </blockquote>
+                </div>
               )}
-            </p>
+            </div>
 
             {/* Button */}
             <button 

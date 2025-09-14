@@ -23,20 +23,17 @@ const PCWave = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-white">
               {/* Stat 1 */}
               <div className="space-y-2">
-                <div className="text-4xl md:text-5xl font-bold text-lime-700">300+</div>
-                <div className="text-lg md:text-xl">Trẻ từ 12 tháng - 5 tuổi</div>
+                <div className="text-4xl md:text-5xl font-bold text-lime-700">Trí Tuệ</div>
               </div>
               
               {/* Stat 2 */}
               <div className="space-y-2">
-                <div className="text-4xl md:text-5xl font-bold text-lime-700">1,000+</div>
-                <div className="text-lg md:text-xl">Số Lượng Thành Viên</div>
+                <div className="text-4xl md:text-5xl font-bold text-lime-700">Từ Bi</div>
               </div>
               
               {/* Stat 3 */}
               <div className="space-y-2">
-                <div className="text-4xl md:text-5xl font-bold text-lime-700">40+</div>
-                <div className="text-lg md:text-xl">Giáo viên</div>
+                <div className="text-4xl md:text-5xl font-bold text-lime-700">Nghị Lực</div>
               </div>
             </div>
           </div>

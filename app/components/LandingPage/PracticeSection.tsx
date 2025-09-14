@@ -13,14 +13,14 @@ const practicesTips = [
     id: 1,
     icon: Heart,
     title: "Nhật ký biết ơn hàng ngày",
-    description: "Mỗi buổi tối, hãy viết ra 3 điều bạn biết ơn trong ngày. Điều nhỏ nhất cũng có thể là nguồn hạnh phúc lớn.",
-    detail: "Cuốn sách 'Trái Tim Biết Ơn' sẽ hướng dẫn bạn cách xây dựng thói quen này một cách dễ dàng và bền vững."
+    description: "Mỗi buổi tối, hãy viết ra 5 điều bạn biết ơn trong ngày. Điều nhỏ nhất cũng có thể là nguồn hạnh phúc lớn.",
+    detail: "Cuốn sách 'Trái Tim Biết Ơn' sẽ hướng dẫn bạn cách xây dựng thói quen này một cách dễ dàng và bền vững.Cách gieo trồng hạt giống chánh kiến là nhận thức đúng đắn "
   },
   {
     id: 2,
     icon: Users,
     title: "Bày tỏ lòng biết ơn với người thân",
-    description: "Hãy nói 'cảm ơn' thường xuyên hơn. Một lời cảm ơn chân thành có thể thay đổi cả ngày của ai đó.",
+    description: "Không chỉ nói lời cảm ơn mà  cần suy nghĩ hành động gắn liền với lòng biết ơn để đem lại hạnh phúc",
     detail: "Trong sách có rất nhiều ví dụ cụ thể về cách bày tỏ lòng biết ơn một cách ý nghĩa và sâu sắc."
   },
   {
@@ -28,14 +28,14 @@ const practicesTips = [
     icon: Star,
     title: "Thiền về lòng biết ơn",
     description: "Dành 5-10 phút mỗi ngày để tĩnh tâm và cảm nhận những điều tốt đẹp xung quanh bạn.",
-    detail: "Sách cung cấp các bài tập thiền đơn giản giúp bạn phát triển tâm thức biết ơn sâu sắc hơn."
+    detail: "Sách chia sẻ 10 hạt giống chánh niệm là 10 bài tập thiền cơ bản đơn giản nhất dặt nền móng giúp bạn phát triền tâm thức biết ơn."
   },
   {
     id: 4,
     icon: Gift,
-    title: "Chia sẻ và cho đi",
-    description: "Hành động cho đi không chỉ giúp người khác mà còn nuôi dưỡng trái tim biết ơn của chính bạn.",
-    detail: "Khám phá những câu chuyện cảm động về sự cho đi và nhận lại trong cuốn sách này."
+    title: "Học hiểu Hành Thiện Pháp",
+    description: "Thiện pháp là cách nuôi dưỡng trái tim biết ơn của chính bạn.",
+    detail: "Phát nguyện từ tâm làm những việc thiện.Xây dựng thói quen làm việc thiện mỗi ngày.Hình thành tính cách biết ơn."
   }
 ];
 
@@ -204,15 +204,15 @@ const PracticeSection = () => {
                 <div className="space-y-3 mb-8">
                   <div className="flex items-center space-x-3">
                     <Sparkles className="w-5 h-5 text-yellow-300" />
-                    <span className={`${lora.className}`}>200+ trang hướng dẫn thực hành cụ thể</span>
+                    <span className={`${lora.className}`}>69 Kệ thơ thiền ,thể thơ ngũ ngôn tứ tuyệt </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <BookOpen className="w-5 h-5 text-yellow-300" />
-                    <span className={`${lora.className}`}>Những câu chuyện cảm động về lòng biết ơn</span>
+                    <span className={`${lora.className}`}>6 giai đoạn gieo hạt </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Heart className="w-5 h-5 text-yellow-300" />
-                    <span className={`${lora.className}`}>Bài tập thiền và nhật ký biết ơn</span>
+                    <span className={`${lora.className}`}>Bài tập thiền Ho'oponopono</span>
                   </div>
                 </div>
 
