@@ -48,7 +48,7 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
   isScrolled 
-    ? 'bg-white/3 backdrop-blur-sm shadow-lg border-b border-gray-200' // backdrop-blur làm mờ phần phía sau
+    ? 'bg-gradient-to-r from-emerald-600/10 to-cyan-600/40  backdrop-blur-sm shadow-lg border-b border-gray-200' // backdrop-blur làm mờ phần phía sau
     : 'bg-transparent'
 }`}>      <div className="max-w-7xl mx-auto px-0 overflow-hidden">
         <div className="flex items-center justify-between h-24">
@@ -57,7 +57,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 ml-6 rounded-md text-gray-700 hover:bg-gray-100 transition"
+              className="p-2 ml-6 rounded-md text-white hover:bg-gray-100 transition"
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -85,7 +85,7 @@ const Navbar = () => {
                 key={item.name}
                 href={item.href}
                 download={item.download || false}
-                className="relative px-4 py-2 text-black font-medium group whitespace-nowrap"
+                className="relative px-4 py-2 text-white drop-shadow-[0_1px_1px_rgba(1,1,1,1)] font-medium group whitespace-nowrap"
               >
                 <span className="relative z-10">{item.name}</span>
                 <div className="absolute bottom-1 left-1/2 w-0 h-0.5 bg-gradient-to-r from-teal-400 to-blue-400 rounded-full transition-all duration-500 group-hover:w-full group-hover:left-0 transform origin-center"></div>
