@@ -187,8 +187,10 @@ const PracticeSection = () => {
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-white opacity-5 rounded-full translate-y-24 -translate-x-24"></div>
           
           <div className="relative z-10 ">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
+            {/* On md+ screens place promotion on the right column and right-align its content */}
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              {/* Left: headings and description */}
+              <div className="text-left md:text-left order-1">
                 <h3 className={`${greatVibes.className} text-4xl md:text-5xl mb-4`}>
                   Cuốn sách dành cho bạn
                 </h3>
@@ -196,11 +198,9 @@ const PracticeSection = () => {
                   "Trái Tim Biết Ơn"
                 </h4>
                 <p className={`${lora.className} text-lg mb-6 leading-relaxed opacity-90`}>
-                  Một hành trình khám phá sức mạnh của lòng biết ơn. Cuốn sách không chỉ là những trang viết, 
+                  Một hành trình khám phá sức mạnh của lòng biết ơn. Cuốn sách không chỉ là những trang viết,
                   mà là người bạn đồng hành giúp bạn tìm thấy hạnh phúc trong những điều giản đơn nhất.
                 </p>
-                
-                {/* Book Features */}
                 <div className="space-y-3 mb-8">
                   <div className="flex items-center space-x-3">
                     <Sparkles className="w-5 h-5 text-yellow-300" />
@@ -213,6 +213,32 @@ const PracticeSection = () => {
                   <div className="flex items-center space-x-3">
                     <Heart className="w-5 h-5 text-yellow-300" />
                     <span className={`${lora.className}`}>Bài tập thiền Ho'oponopono</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right: translators and features */}
+              <div className="order-2 text-left">
+                {/* Translator / Credits */}
+                <div className="mt-4 mb-6">
+                  <p className={`${lora.className} mb-3`}>Để lòng biết ơn lan tỏa ra cộng đồng quốc tế, cuốn sách đã được phiên dịch sang tiếng Anh bởi:</p>
+
+                  <h5 className={`${raleway.className} text-lg font-semibold text-white mb-3`}>Phiên dịch (English)</h5>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-items-stretch">
+                    <div className="bg-white/10 p-4 rounded-lg">
+                      <p className={`${raleway.className} font-bold text-white`}>SC Thuần Định</p>
+                      <p className={`${lora.className} text-sm text-gray-100 whitespace-pre-line mt-2`}>
+                        {`Thế danh: Phạm Ngọc Oanh\nXuất gia hiện ở Huế\nTrường Mầm Non Lâm Tỳ Ni\n23-25 đường Trương Gia Mô, P. Vỹ Dạ, TP. Huế`}
+                      </p>
+                    </div>
+
+                    <div className="bg-white/10 p-4 rounded-lg">
+                      <p className={`${raleway.className} font-bold text-white`}>Vũ Tiến Hưng</p>
+                      <p className={`${lora.className} text-sm text-gray-100 whitespace-pre-line mt-2`}>
+                        {`Sinh ngày: 25-09-2008\nTrường: THCS & THPT Marie Curie Văn Phú, Kiến Hưng, Hà Nội`}
+                      </p>
+                    </div>
                   </div>
                 </div>
 
