@@ -111,34 +111,40 @@ const IntroductionSection = () => {
               </div>
             </div>
             
-            {/* Mobile Layout: mỗi ảnh một hàng */}
-            <div className="grid grid-cols-1 gap-4 lg:hidden">
-              <div data-aos="zoom-in" data-aos-delay="300" className="rounded-2xl h-32 overflow-hidden shadow-2xl relative">
-                <Image
-                  src="/assetLandingPage/AssetIntroduceVBO/1.jpg"
-                  alt="Vườn biết ơn mobile 1"
-                  fill
-                  sizes="100vw"
-                  className="object-cover"
-                />
+            {/* Mobile Layout: 1 ảnh trên, 2 ảnh dưới */}
+            <div className="lg:hidden">
+              {/* Hàng trên: 1 ảnh */}
+              <div className="grid grid-cols-1 mb-4">
+                <div data-aos="zoom-in" data-aos-delay="300" className="rounded-2xl h-32 overflow-hidden shadow-2xl relative">
+                  <Image
+                    src="/assetLandingPage/AssetIntroduceVBO/1.jpg"
+                    alt="Vườn biết ơn mobile 1"
+                    fill
+                    sizes="100vw"
+                    className="object-cover"
+                  />
+                </div>
               </div>
-              <div data-aos="zoom-in" data-aos-delay="350" className="rounded-2xl h-32 overflow-hidden shadow-2xl relative">
-                <Image
-                  src="/assetLandingPage/AssetIntroduceVBO/2.jpg"
-                  alt="Vườn biết ơn mobile 2"
-                  fill
-                  sizes="100vw"
-                  className="object-cover"
-                />
-              </div>
-              <div data-aos="zoom-in" data-aos-delay="400" className="rounded-2xl h-32 overflow-hidden shadow-2xl relative">
-                <Image
-                  src="/assetLandingPage/AssetIntroduceVBO/3.jpg"
-                  alt="Vườn biết ơn mobile 3"
-                  fill
-                  sizes="100vw"
-                  className="object-cover"
-                />
+              {/* Hàng dưới: 2 ảnh */}
+              <div className="grid grid-cols-2 gap-4">
+                <div data-aos="zoom-in" data-aos-delay="350" className="rounded-2xl h-32 overflow-hidden shadow-2xl relative">
+                  <Image
+                    src="/assetLandingPage/AssetIntroduceVBO/2.jpg"
+                    alt="Vườn biết ơn mobile 2"
+                    fill
+                    sizes="50vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="400" className="rounded-2xl h-32 overflow-hidden shadow-2xl relative">
+                  <Image
+                    src="/assetLandingPage/AssetIntroduceVBO/3.jpg"
+                    alt="Vườn biết ơn mobile 3"
+                    fill
+                    sizes="50vw"
+                    className="object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>

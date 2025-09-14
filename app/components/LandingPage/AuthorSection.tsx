@@ -124,34 +124,40 @@ const AuthorSection = () => {
               </div>
             </div>
             
-            {/* Mobile Layout: mỗi ảnh một hàng */}
-            <div className="grid grid-cols-1 gap-4 lg:hidden">
-              <div data-aos="zoom-in" data-aos-delay="300" className="rounded-2xl h-32 overflow-hidden shadow-2xl relative">
-                <Image
-                  src="/assetLandingPage/AssetAuthor/3.jpg"
-                  alt="Tác giả mobile 1"
-                  fill
-                  sizes="100vw"
-                  className="object-cover"
-                />
+            {/* Mobile Layout: 2 ảnh trên, 1 ảnh dưới */}
+            <div className="lg:hidden">
+              {/* Hàng trên: 2 ảnh */}
+              <div className="grid grid-cols-2 gap-4 mb-4">
+                <div data-aos="zoom-in" data-aos-delay="300" className="rounded-2xl h-32 overflow-hidden shadow-2xl relative">
+                  <Image
+                    src="/assetLandingPage/AssetAuthor/3n.jpg"
+                    alt="Tác giả mobile 1"
+                    fill
+                    sizes="50vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="350" className="rounded-2xl h-32 overflow-hidden shadow-2xl relative">
+                  <Image
+                    src="/assetLandingPage/AssetAuthor/2n.jpg"
+                    alt="Tác giả mobile 2"
+                    fill
+                    sizes="50vw"
+                    className="object-cover"
+                  />
+                </div>
               </div>
-              <div data-aos="zoom-in" data-aos-delay="350" className="rounded-2xl h-32 overflow-hidden shadow-2xl relative">
-                <Image
-                  src="/assetLandingPage/AssetAuthor/2.jpg"
-                  alt="Tác giả mobile 2"
-                  fill
-                  sizes="100vw"
-                  className="object-cover"
-                />
-              </div>
-              <div data-aos="zoom-in" data-aos-delay="400" className="rounded-2xl h-32 overflow-hidden shadow-2xl relative">
-                <Image
-                  src="/assetLandingPage/AssetAuthor/1.jpg"
-                  alt="Tác giả mobile 3"
-                  fill
-                  sizes="100vw"
-                  className="object-cover"
-                />
+              {/* Hàng dưới: 1 ảnh */}
+              <div className="grid grid-cols-1">
+                <div data-aos="zoom-in" data-aos-delay="400" className="rounded-2xl h-32 overflow-hidden shadow-2xl relative">
+                  <Image
+                    src="/assetLandingPage/AssetAuthor/1.jpg"
+                    alt="Tác giả mobile 3"
+                    fill
+                    sizes="100vw"
+                    className="object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>

@@ -91,7 +91,7 @@ const MobileWave = () => {
         
         {/* Mobile Statistics Content */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="container mx-auto px-4 -mt-10">
+          <div className="container mx-auto px-4 -mt-13">
             <div className="grid grid-cols-1 gap-6 text-center text-white">
               {/* Stat 1 */}
               <div className="space-y-0">
@@ -114,8 +114,8 @@ const MobileWave = () => {
           </div>
         </div>
         
-        <div className="-mt-16">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 180">
+        <div className="-mt-24">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 180">
             <defs>
               <linearGradient id="mobileBlueGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" stop-color="#4aaed3" stop-opacity="1" />
@@ -129,7 +129,7 @@ const MobileWave = () => {
           </svg>
         </div>
         <div className="-mt-6">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 300">
             <defs>
               <linearGradient id="mobileBlueGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" stop-color="#4aaed3" stop-opacity="1" />
