@@ -151,7 +151,7 @@ const AuthorSection = () => {
               <div className="grid grid-cols-1">
                 <div data-aos="zoom-in" data-aos-delay="400" className="rounded-2xl h-32 overflow-hidden shadow-2xl relative">
                   <Image
-                    src="/assetLandingPage/AssetAuthor/1.jpg"
+                    src="/assetLandingPage/AssetAuthor/1n.jpg"
                     alt="Tác giả mobile 3"
                     fill
                     sizes="100vw"
