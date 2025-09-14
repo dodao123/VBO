@@ -106,7 +106,7 @@ const AuthorSection = () => {
               </div>
               <div data-aos="zoom-in" data-aos-delay="350" className="rounded-2xl h-56 overflow-hidden shadow-2xl relative">
                 <Image
-                  src="/assetLandingPage/AssetAuthor/2.jpg"
+                  src="/assetLandingPage/AssetAuthor/2n.jpg"
                   alt="Tác giả 1"
                   fill
                   sizes="(min-width:1024px) 50vw, 100vw"

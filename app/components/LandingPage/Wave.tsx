@@ -23,17 +23,20 @@ const PCWave = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-white">
               {/* Stat 1 */}
               <div className="space-y-2">
-                <div className="text-4xl md:text-5xl font-bold text-lime-700">Trí Tuệ</div>
+                <div className="text-4xl md:text-5xl font-bold text-gray-800">Trí Tuệ</div>
+                <div className="text-lg text-white">Nhờ Thiền Và Đọc Sách</div>
               </div>
               
               {/* Stat 2 */}
               <div className="space-y-2">
-                <div className="text-4xl md:text-5xl font-bold text-lime-700">Từ Bi</div>
+                <div className="text-4xl md:text-5xl font-bold text-gray-800">Từ Bi</div>
+                <div className="text-lg text-white">Nhờ Biết Ơn Và Yêu Thương</div>
               </div>
               
               {/* Stat 3 */}
               <div className="space-y-2">
-                <div className="text-4xl md:text-5xl font-bold text-lime-700">Nghị Lực</div>
+                <div className="text-4xl md:text-5xl font-bold text-gray-800">Nghị Lực</div>
+                <div className="text-lg text-white">Nhờ Nỗ Lực Và Kiên Trì</div>
               </div>
             </div>
           </div>
@@ -92,17 +95,20 @@ const MobileWave = () => {
             <div className="grid grid-cols-1 gap-6 text-center text-white">
               {/* Stat 1 */}
               <div className="space-y-0">
-                <div className="text-3xl font-bold text-lime-700">Trí Tuệ</div>
+                <div className="text-2xl font-bold text-gray-800">Trí Tuệ</div>
+                <div className="text-lg text-white">Nhờ Thiền Và Đọc Sách</div>
               </div>
               
               {/* Stat 2 */}
               <div className="space-y-1">
-                <div className="text-3xl font-bold text-lime-700">Từ Bi</div>
+                <div className="text-2xl font-bold text-gray-800">Từ Bi</div>
+                <div className="text-lg text-white">Nhờ Biết Ơn Và Yêu Thương</div>
               </div>
               
               {/* Stat 3 */}
               <div className="space-y-1">
-                <div className="text-3xl font-bold text-lime-700">Nghị lực</div>
+                <div className="text-2xl font-bold text-gray-800">Nghị Lực</div>
+                <div className="text-lg text-white">Nhờ Nỗ Lực Và Kiên Trì</div>
               </div>
             </div>
           </div>
