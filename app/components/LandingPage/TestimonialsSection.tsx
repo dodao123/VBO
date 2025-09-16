@@ -83,7 +83,7 @@ const TestimonialsSection = () => {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="w-full py-20 px-4 bg-gradient-to-br from-green-50 via-white to-green-50 relative overflow-hidden">
+    <section className="w-full py-20 px-4 relative overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-10 left-10 w-32 h-32 bg-green-100 rounded-full blur-xl"></div>
