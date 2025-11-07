@@ -64,13 +64,6 @@ const AuthorSection = () => {
                   <p><strong>Hạnh nguyện:</strong></p>
                   <p>Sống đời phạm hạnh, thiểu dục tri túc và làm những thiện pháp.</p>
 
-                  <p><strong>Nguyện mong:</strong></p>
-                  <p>
-                    Từ năm 2026 đến năm 2035 — Đủ nhân duyên thiện lành, được Phật Tử tin tưởng yêu mến
-                    phát tâm chung tay xây dựng một tịnh xá có thư viện và khu vườn biết ơn đủ rộng để mở
-                    các khóa thiền cho trẻ em, hướng dẫn các em đọc sách và thực tập lòng biết ơn.
-                  </p>
-
                   <p><strong>SC Diệu Thiện chia sẻ rằng:</strong></p>
                   <blockquote className="pl-4 border-l-4 border-green-200 italic">
                     "Con tin sâu sắc vào luật nhân quả, con luôn tâm niệm rằng người có lòng biết ơn
