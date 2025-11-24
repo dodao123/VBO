@@ -1,5 +1,7 @@
 
 
+"use client";
+
 import { useState, useEffect } from 'react';
 import { Menu, X, User, Phone } from 'lucide-react';
 import Image from "next/image";
@@ -25,13 +27,14 @@ const Navbar = () => {
   }, []);
 
   const menuItems = [
-    { name: 'Home', href: '#' },
+    { name: 'Home', href: '/' },
     { name: 'About', href: '#about' },
-    { name: 'Teachers', href: '#teachers' },
+    { name: 'Read Book', href: '/Reader/ReaderDocx' },
     { name: 'Download Book', href: '/docs/Gratefulheart.docx', download: true },
+
   ];
 
-    // Khóa scroll khi mở menu
+  // Khóa scroll khi mở menu
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -46,13 +49,12 @@ const Navbar = () => {
 
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-  isScrolled 
-    ? 'bg-gradient-to-r from-emerald-600/10 to-cyan-600/40  backdrop-blur-sm shadow-lg border-b border-gray-200' // backdrop-blur làm mờ phần phía sau
-    : 'bg-transparent'
-}`}>      <div className="max-w-7xl mx-auto px-0 overflow-hidden">
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
+        ? 'bg-gradient-to-r from-emerald-600/10 to-cyan-600/40  backdrop-blur-sm shadow-lg border-b border-gray-200' // backdrop-blur làm mờ phần phía sau
+        : 'bg-transparent'
+      }`}>      <div className="max-w-7xl mx-auto px-0 overflow-hidden">
         <div className="flex items-center justify-between h-24">
-          
+
           {/* Toggle Button for Mobile */}
           <div className="md:hidden flex items-center">
             <button
@@ -101,64 +103,62 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {/* Mobile Menu */}
-{/* Overlay mờ khi mở menu (semi-transparent + backdrop blur) */}
-<div
-  className={`fixed inset-0 transition-opacity duration-300 z-40 pointer-events-none ${
-    isMenuOpen ? "visible opacity-100 pointer-events-auto" : "invisible opacity-0"
-  }`}
-  onClick={() => setIsMenuOpen(false)} // click ra ngoài để đóng menu
->
-  {/* Use a semi-transparent black layer and backdrop blur so the page is still visible */}
-  <div
-    aria-hidden
-    className={`absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300`}
-  />
-</div>
-
-{/* Mobile Menu */}
-<div
-  className={`fixed top-0 left-0 h-full w-72 bg-white/95 z-50 shadow-lg transform transition-transform duration-300 backdrop-saturate-105 ${
-    isMenuOpen ? "translate-x-0" : "-translate-x-full"
-  }`}
-  role="dialog"
-  aria-modal={isMenuOpen}
->
-  <div className="px-4 py-6 space-y-4 relative h-full">
-    {/* Nút đóng */}
-    <button
-      onClick={() => setIsMenuOpen(false)}
-      aria-label="Close menu"
-      title="Close menu"
-      className="absolute ml-10 top-4 right-4 p-2 rounded-md text-gray-700 hover:bg-gray-100 transition"
-    >
-      <X className="h-6 w-6" />
-    </button>
-
-    {/* Menu Items */}
-    <div className="mt-10 space-y-3">
-      {menuItems.map((item) => (
-        <a
-          key={item.name}
-          href={item.href}
-          download={item.download || false}
-          className="block px-4 py-3 text-gray-800 hover:bg-yellow-400 hover:text-black rounded transition font-medium"
-          onClick={() => setIsMenuOpen(false)}
-        >
-          {item.name}
-        </a>
-      ))}
-
-      {/* CTA */}
-      <button
-        className="w-full flex items-center justify-center space-x-2 px-4 py-3 bg-yellow-400 text-black rounded hover:bg-yellow-500 transition font-medium"
-        onClick={() => setIsMenuOpen(false)}
+      {/* Overlay mờ khi mở menu (semi-transparent + backdrop blur) */}
+      <div
+        className={`fixed inset-0 transition-opacity duration-300 z-40 pointer-events-none ${isMenuOpen ? "visible opacity-100 pointer-events-auto" : "invisible opacity-0"
+          }`}
+        onClick={() => setIsMenuOpen(false)} // click ra ngoài để đóng menu
       >
-        <Phone className="w-4 h-4" />
-        <span>Liên hệ</span>
-      </button>
-    </div>
-  </div>
-</div>
+        {/* Use a semi-transparent black layer and backdrop blur so the page is still visible */}
+        <div
+          aria-hidden
+          className={`absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300`}
+        />
+      </div>
+
+      {/* Mobile Menu */}
+      <div
+        className={`fixed top-0 left-0 h-full w-72 z-50 shadow-lg transform transition-transform duration-300 backdrop-saturate-105 ${isMenuOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
+        role="dialog"
+        aria-modal={isMenuOpen}
+      >
+        <div className="px-4 py-6 space-y-4 relative h-full">
+          {/* Nút đóng */}
+          <button
+            onClick={() => setIsMenuOpen(false)}
+            aria-label="Close menu"
+            title="Close menu"
+            className="absolute ml-10 top-4 right-4 p-2 rounded-md text-gray-700 hover:bg-gray-100 transition"
+          >
+            <X className="h-6 w-6" />
+          </button>
+
+          {/* Menu Items */}
+          <div className="mt-10 space-y-3">
+            {menuItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                download={item.download || false}
+                className="block px-4 py-3 text-gray-800 hover:bg-yellow-400 hover:text-black rounded transition font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.name}
+              </a>
+            ))}
+
+            {/* CTA */}
+            <button
+              className="w-full flex items-center justify-center space-x-2 px-4 py-3 bg-yellow-400 text-black rounded hover:bg-yellow-500 transition font-medium"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <Phone className="w-4 h-4" />
+              <span>Liên hệ</span>
+            </button>
+          </div>
+        </div>
+      </div>
 
 
     </nav>

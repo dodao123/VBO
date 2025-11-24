@@ -11,7 +11,7 @@ const allura = Allura({ subsets: ['latin'], weight: '400' });
 const raleway = Raleway({ subsets: ['latin'], weight: ['400', '600'] });
 const lora = Lora({ subsets: ['latin'], weight: ['400', '600'] });
 
-const AuthorSection = () => { 
+const AuthorSection = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
@@ -33,14 +33,14 @@ const AuthorSection = () => {
             <h1 data-aos="fade-left" data-aos-delay="150"
               className={`${greatVibes.className} text-green-600 text-5xl md:text-7xl mb-8`}
             >
-              Tác Giả 
+              Tác Giả
             </h1>
 
             {/* Main Heading */}
             <h2 data-aos="fade-left" data-aos-delay="200" className={`${lora.className} text-2xl md:text-3xl font-semibold text-gray-800 leading-relaxed`}>
               Sách Trái Tim Biết Ơn
             </h2>
-            
+
             {/* Description */}
             <div data-aos="fade-up" data-aos-delay="250" className={`${lora.className} text-base md:text-lg text-gray-600 leading-relaxed`}>
 
@@ -76,7 +76,7 @@ const AuthorSection = () => {
             </div>
 
             {/* Button */}
-            <button 
+            <button
               onClick={() => setIsExpanded(!isExpanded)}
               className="bg-blue-400 hover:bg-blue-500 text-white font-medium px-8 py-3 rounded-full transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 font-sans"
             >
@@ -88,9 +88,9 @@ const AuthorSection = () => {
           <div data-aos="fade-right" data-aos-delay="200" className="lg:order-1">
             {/* PC Layout: 1 ảnh lớn trên, 2 ảnh nhỏ dưới */}
             <div className="hidden lg:grid lg:grid-cols-2 mt-20 lg:gap-6">
-              <div data-aos="zoom-in" data-aos-delay="300" className="col-span-2 h-86 rounded-2xl overflow-hidden shadow-2xl relative">
+              <div data-aos="zoom-in" data-aos-delay="300" className="col-span-2 h-62 rounded-2xl overflow-hidden shadow-2xl relative">
                 <Image
-                  src="/assetLandingPage/AssetAuthor/3.jpg"
+                  src="/assetLandingPage/AssetAuthor/3n.jpg"
                   alt="Tác giả chính"
                   fill
                   sizes="(min-width:1024px) 100vw, 100vw"
@@ -116,7 +116,7 @@ const AuthorSection = () => {
                 />
               </div>
             </div>
-            
+
             {/* Mobile Layout: 2 ảnh trên, 1 ảnh dưới */}
             <div className="lg:hidden">
               {/* Hàng trên: 2 ảnh */}
