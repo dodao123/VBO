@@ -1,6 +1,16 @@
-import ReaderDocx from '@/components/Reader/ReaderDocx';
+"use client";
+import dynamic from 'next/dynamic';
 import Navbar from '@/components/LandingPage/Navbar';
 import Image from 'next/image';
+
+const ReaderDocx = dynamic(() => import('@/components/Reader/ReaderDocx'), {
+    ssr: false,
+    loading: () => (
+        <div className="flex justify-center items-center min-h-[60vh]">
+            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-amber-500"></div>
+        </div>
+    ),
+});
 
 export default function ReaderPage() {
     return (
