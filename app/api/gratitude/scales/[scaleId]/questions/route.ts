@@ -7,10 +7,10 @@ import type { ScaleType } from '@/api/types/gratitude.types';
 
 export async function GET(
   request: Request,
-  { params }: { params: { scaleId: string } }
+  { params }: { params: Promise<{ scaleId: string }> }
 ) {
   try {
-    const { scaleId } = params;
+    const { scaleId } = await params;
     
     const questions = await GratitudeService.getQuestionsByScale(
       scaleId as ScaleType

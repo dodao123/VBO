@@ -6,10 +6,10 @@ import { GratitudeService } from '@/api/Services/gratitudeService';
 
 export async function GET(
   request: Request,
-  { params }: { params: { resultId: string } }
+  { params }: { params: Promise<{ resultId: string }> }
 ) {
   try {
-    const { resultId } = params;
+    const { resultId } = await params;
     
     const result = await GratitudeService.getResultById(resultId);
     

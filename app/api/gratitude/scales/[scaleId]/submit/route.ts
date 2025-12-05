@@ -7,10 +7,10 @@ import type { ScaleType, SubmitTestRequest } from '@/api/types/gratitude.types';
 
 export async function POST(
   request: Request,
-  { params }: { params: { scaleId: string } }
+  { params }: { params: Promise<{ scaleId: string }> }
 ) {
   try {
-    const { scaleId } = params;
+    const { scaleId } = await params;
     const body: SubmitTestRequest = await request.json();
     
     // Validate input

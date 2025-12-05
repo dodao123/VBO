@@ -6,10 +6,10 @@ import { supabase } from '@/api/Database/supabaseClient';
 
 export async function GET(
   request: Request,
-  { params }: { params: { userId: string } }
+  { params }: { params: Promise<{ userId: string }> }
 ) {
   try {
-    const { userId } = params;
+    const { userId } = await params;
 
     const { data, error } = await supabase
       .from('gratitude_users')
