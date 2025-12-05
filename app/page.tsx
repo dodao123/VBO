@@ -11,6 +11,7 @@ import IntroductionSection from '@/components/LandingPage/IntroductionSection';
 import AuthorSection from '@/components/LandingPage/AuthorSection';
 import TestimonialsSection from '@/components/LandingPage/TestimonialsSection';
 import GallerySection from '@/components/LandingPage/GallerySection';
+import GoldenBoard from '@/components/LandingPage/GoldenBoard';
 import PracticeSection from '@/components/LandingPage/PracticeSection';
 import Footer from '@/components/LandingPage/Footer';
 import Wave from '@/components/LandingPage/Wave';
@@ -30,6 +31,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <Wave />
+      <GoldenBoard />
       <IntroductionSection />
       <AuthorSection />
       <TestimonialsSection />

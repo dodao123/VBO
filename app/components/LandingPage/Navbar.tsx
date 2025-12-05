@@ -28,10 +28,9 @@ const Navbar = () => {
 
   const menuItems = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '#about' },
+    { name: 'Practise', href: '/Practise' },
     { name: 'Read Book', href: '/Reader/ReaderDocx' },
     { name: 'Download Book', href: '/docs/Gratefulheart.docx', download: true },
-
   ];
 
   // Khóa scroll khi mở menu
